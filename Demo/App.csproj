@@ -60,6 +60,9 @@
 	  <MauiXaml Update="ButtonNotInScrollViewPage.xaml">
 	    <Generator></Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Controls\TeknoButton.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ExamplePage.xaml">
 	    <Generator></Generator>
 	  </MauiXaml>
