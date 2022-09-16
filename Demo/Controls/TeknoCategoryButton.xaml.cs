@@ -2,9 +2,9 @@ using Microsoft.Maui.Graphics;
 
 namespace App.Controls;
 
-public partial class TeknoButton : StateButton.StateButton
+public partial class TeknoCategoryButton : StateButton.StateButton
 {
-	public TeknoButton()
+	public TeknoCategoryButton()
 	{
 		InitializeComponent();
 	}
@@ -13,16 +13,13 @@ public partial class TeknoButton : StateButton.StateButton
 	public static readonly BindableProperty TextProperty =
 		BindableProperty.Create(nameof(TextProperty),
 		typeof(string),
-		typeof(TeknoButton),
+		typeof(TeknoCategoryButton),
 		defaultBindingMode: BindingMode.TwoWay,
 
 		propertyChanged: (bindable, oldVal, newVal) =>
 		{
-			TeknoButton page = (TeknoButton)bindable;
-			if (!string.IsNullOrEmpty(newVal.ToString()))
-			{
-				page.xLabel.Text = newVal.ToString();
-			}
+			TeknoCategoryButton page = (TeknoCategoryButton)bindable;
+			page.xLabel.Text = (string)newVal;
 		});
 
 	public string Text
@@ -31,18 +28,38 @@ public partial class TeknoButton : StateButton.StateButton
 		set => SetValue(TextProperty, value);
 	}
 	#endregion
+	
+	#region | FontSize |
+	public static readonly BindableProperty FontSizeProperty =
+		BindableProperty.Create(nameof(FontSizeProperty),
+		typeof(double),
+		typeof(TeknoCategoryButton),
+		defaultBindingMode: BindingMode.TwoWay,
+
+		propertyChanged: (bindable, oldVal, newVal) =>
+		{
+			TeknoCategoryButton page = (TeknoCategoryButton)bindable;
+			page.xLabel.FontSize = (double)newVal;
+		});
+
+	public double FontSize
+	{
+		get => (double)GetValue(FontSizeProperty);
+		set => SetValue(FontSizeProperty, value);
+	}
+	#endregion
 
 	#region | TextColor |
 
 	public static readonly BindableProperty TextColorProperty =
 		BindableProperty.Create(nameof(TextColorProperty),
 		typeof(Color),
-		typeof(TeknoButton),
+		typeof(TeknoCategoryButton),
 		defaultBindingMode: BindingMode.TwoWay,
 
 		propertyChanged: (bindable, oldVal, newVal) =>
 		{
-			TeknoButton page = (TeknoButton)bindable;
+			TeknoCategoryButton page = (TeknoCategoryButton)bindable;
 			page.xLabel.TextColor = (Color)newVal;
 		});
 
@@ -53,37 +70,17 @@ public partial class TeknoButton : StateButton.StateButton
 	}
 	#endregion
 
-	#region | FontSize |
-	public static readonly BindableProperty FontSizeProperty =
-		BindableProperty.Create(nameof(FontSizeProperty),
-		typeof(double),
-		typeof(TeknoButton),
-		defaultBindingMode: BindingMode.TwoWay,
-
-		propertyChanged: (bindable, oldVal, newVal) =>
-		{
-			TeknoButton page = (TeknoButton)bindable;
-			page.xLabel.FontSize = (double)newVal;
-		});
-
-	public double FontSize
-	{
-		get => (double)GetValue(FontSizeProperty);
-		set => SetValue(FontSizeProperty, value);
-	}
-	#endregion
-	
 	#region | FontFamily |
 
 	public static readonly BindableProperty FontFamilyProperty =
 		BindableProperty.Create(nameof(FontFamilyProperty),
 		typeof(string),
-		typeof(TeknoButton),
+		typeof(TeknoCategoryButton),
 		defaultBindingMode: BindingMode.TwoWay,
 
 		propertyChanged: (bindable, oldVal, newVal) =>
 		{
-			TeknoButton page = (TeknoButton)bindable;
+			TeknoCategoryButton page = (TeknoCategoryButton)bindable;
 			page.xLabel.FontFamily = (string)newVal;
 		});
 
@@ -99,13 +96,13 @@ public partial class TeknoButton : StateButton.StateButton
 	public static readonly BindableProperty BackColorProperty =
 		BindableProperty.Create(nameof(BackColorProperty),
 		typeof(Color),
-		typeof(TeknoButton),
+		typeof(TeknoCategoryButton),
 		defaultBindingMode: BindingMode.TwoWay,
 
 		propertyChanged: (bindable, oldVal, newVal) =>
 		{
-			TeknoButton page = (TeknoButton)bindable;
-			page.xStateButton.BackgroundColor = (Color)newVal;
+			TeknoCategoryButton page = (TeknoCategoryButton)bindable;
+			page.xTeknoCategoryButton.BackgroundColor = (Color)newVal;
 		});
 
 	public Color BackColor
@@ -114,18 +111,60 @@ public partial class TeknoButton : StateButton.StateButton
 		set => SetValue(BackColorProperty, value);
 	}
 	#endregion
-	 
+
+	#region | BarColor |
+
+	public static readonly BindableProperty BarColorProperty =
+		BindableProperty.Create(nameof(BarColorProperty),
+		typeof(Color),
+		typeof(TeknoCategoryButton),
+		defaultBindingMode: BindingMode.TwoWay,
+
+		propertyChanged: (bindable, oldVal, newVal) =>
+		{
+			TeknoCategoryButton page = (TeknoCategoryButton)bindable;
+			page.xBar.Color = (Color)newVal;
+		});
+
+	public Color BarColor
+	{
+		get => (Color)GetValue(BarColorProperty);
+		set => SetValue(BarColorProperty, value);
+	}
+	#endregion
+
+	#region | CircleColor |
+
+	public static readonly BindableProperty CircleColorProperty =
+		BindableProperty.Create(nameof(CircleColorProperty),
+		typeof(Color),
+		typeof(TeknoCategoryButton),
+		defaultBindingMode: BindingMode.TwoWay,
+
+		propertyChanged: (bindable, oldVal, newVal) =>
+		{
+			TeknoCategoryButton page = (TeknoCategoryButton)bindable;
+			page.xBorder.BackgroundColor = (Color)newVal;
+		});
+
+	public Color CircleColor
+	{
+		get => (Color)GetValue(CircleColorProperty);
+		set => SetValue(CircleColorProperty, value);
+	}
+	#endregion
+
 	#region | ClickBackgroundColor |
 
 	public static readonly BindableProperty ClickBackgroundColorProperty =
 		BindableProperty.Create(nameof(ClickBackgroundColorProperty),
 		typeof(Color),
-		typeof(TeknoButton),
+		typeof(TeknoCategoryButton),
 		defaultBindingMode: BindingMode.TwoWay,
 
 		propertyChanged: (bindable, oldVal, newVal) =>
 		{
-			TeknoButton page = (TeknoButton)bindable;
+			TeknoCategoryButton page = (TeknoCategoryButton)bindable;
 			page.ClickedBackgroundColor.Value = (Color)newVal;
 		});
 
@@ -139,21 +178,21 @@ public partial class TeknoButton : StateButton.StateButton
 	#region | ImageSource |
 
 	public static readonly BindableProperty ImageSourceProperty =
-	    BindableProperty.Create(nameof(ImageSourceProperty),
-	    typeof(ImageSource),
-	    typeof(TeknoButton),
-	    defaultBindingMode: BindingMode.TwoWay,
+		BindableProperty.Create(nameof(ImageSourceProperty),
+		typeof(ImageSource),
+		typeof(TeknoCategoryButton),
+		defaultBindingMode: BindingMode.TwoWay,
 
-	    propertyChanged: (bindable, oldVal, newVal) =>
-	    {
-			TeknoButton page = (TeknoButton)bindable;
-	        page.Image.Source = (ImageSource)newVal;
-	    });
+		propertyChanged: (bindable, oldVal, newVal) =>
+		{
+			TeknoCategoryButton page = (TeknoCategoryButton)bindable;
+			page.xImage.Source = (ImageSource)newVal;
+		});
 
 	public ImageSource ImageSource
 	{
-	    get => (ImageSource)GetValue(ImageSourceProperty);
-	    set => SetValue(ImageSourceProperty, value);
+		get => (ImageSource)GetValue(ImageSourceProperty);
+		set => SetValue(ImageSourceProperty, value);
 	}
 	#endregion
 
@@ -161,12 +200,12 @@ public partial class TeknoButton : StateButton.StateButton
 	public static readonly BindableProperty CornerRadiusProperty =
 		BindableProperty.Create(nameof(CornerRadiusProperty),
 		typeof(CornerRadius),
-		typeof(TeknoButton),
+		typeof(TeknoCategoryButton),
 		defaultBindingMode: BindingMode.TwoWay,
 
 		propertyChanged: (bindable, oldVal, newVal) =>
 		{
-			TeknoButton page = (TeknoButton)bindable;
+			TeknoCategoryButton page = (TeknoCategoryButton)bindable;
 			page.RoundRectangle.CornerRadius = (CornerRadius)newVal;
 		});
 

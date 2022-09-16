@@ -13,16 +13,16 @@
 
   <PropertyGroup>
     <GitInfoReportImportance>high</GitInfoReportImportance>
-    <PackageId>IeuanWalker.Maui.StateButton</PackageId>
+    <PackageId>GokhanDogru.Maui.StateButton</PackageId>
     <Summary>With this control you are able to create any style of button. This is possible as it acts as a wrapper to your XAML and provides you the events/ commands and properties to bind too. It's also 100% accessible.</Summary>
-    <Authors>Ieuan Walker</Authors>
-    <Owners>Ieuan Walker</Owners>
+    <Authors>Ieuan Walker &amp; GokhanDogru</Authors>
+    <Owners>Ieuan Walker &amp; GokhanDogru</Owners>
     <NeutralLanguage>en</NeutralLanguage>
-    <Product>IeuanWalker.Maui.StateButton</Product>
+    <Product>GokhanDogru.Maui.StateButton</Product>
     <Copyright>© Ieuan Walker. All rights reserved.</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/IeuanWalker/Maui.StateButton</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/IeuanWalker/Maui.StateButton</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/dgokhan/Maui.StateButton</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dgokhan/Maui.StateButton</RepositoryUrl>
     <PackageReleaseNotes></PackageReleaseNotes>
     <DefineConstants>$(DefineConstants);</DefineConstants>
     <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
@@ -39,7 +39,7 @@
     <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 

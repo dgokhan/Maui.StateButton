@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    x:Class="App.ExampleTestPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:c="clr-namespace:App.Controls"
+    xmlns:stateButton="clr-namespace:StateButton;assembly=StateButton"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="Examples"
+    BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowDefinitions="350,Auto,*"
+                  Margin="20,0,20,0">
+                
+                <Grid Grid.Row="0"
+                    VerticalOptions="Center"
+                    RowDefinitions="30,30,30,30,*"
+                    ColumnDefinitions="*,*,*">
+
+                    <c:TeknoButton 
+                        Grid.Row="0" Grid.Column="0"
+                        Text="Ziyaret Föyü"
+                        CornerRadius="25"
+                        ImageSource="logo.jpg"
+                        BackColor="#de81c9"
+                        FontFamily="FASolid900"
+                        ClickBackgroundColor="#10a366"/>
+
+                    <c:TeknoButton 
+                        Grid.Row="0" Grid.Column="1"
+                        Text="Sipariş Föyü"
+                        CornerRadius="25"
+                        ImageSource="logo.jpg"
+                        BackColor="#de81c9"
+                        FontFamily="FASolid900"
+                        ClickBackgroundColor="Red"/>
+
+                    <c:TeknoButton 
+                        Grid.Row="0" Grid.Column="2"
+                        Text="Stok Föyü"
+                        CornerRadius="25"
+                        ImageSource="logo.jpg"
+                        BackColor="#de81c9"/>
+
+                    <c:TeknoButton 
+                        Grid.Row="1" Grid.Column="0"
+                        Text="C/H Föyü"
+                        CornerRadius="25"
+                        ImageSource="logo.jpg"
+                        BackColor="#de81c9"/>
+
+                    <c:TeknoButton 
+                        Grid.Row="1" Grid.Column="1"
+                        Text="Değişim"
+                        CornerRadius="25"
+                        ImageSource="logo.jpg"
+                        BackColor="#9dc764"/>
+
+                    <c:TeknoButton 
+                        Grid.Row="1" Grid.Column="2"
+                        Text="Tahsilat"
+                        CornerRadius="25"
+                        ImageSource="logo.jpg"
+                        BackColor="#b8ccff"/>
+
+                    <c:TeknoButton 
+                        Grid.Row="2" Grid.Column="0"
+                        Text="Sipariş"
+                        CornerRadius="25"
+                        ImageSource="logo.jpg"
+                        BackColor="#b8ccff"/>
+
+                    <c:TeknoButton 
+                        Grid.Row="2" Grid.Column="1"
+                        Text="İrsaliye"
+                        CornerRadius="25"
+                        ImageSource="logo.jpg"
+                        BackColor="#b8ccff"/>
+
+                    <c:TeknoButton 
+                        Grid.Row="2" Grid.Column="2"
+                        Text="Fatura"
+                        CornerRadius="25"
+                        ImageSource="logo.jpg"
+                        BackColor="#b8ccff"/>
+
+                    <c:TeknoButton 
+                        Grid.Row="3" Grid.Column="0"
+                        Text="C/H Bilgileri"
+                        CornerRadius="25"
+                        ImageSource="logo.jpg"
+                        BackColor="#e3b45a"/>
+
+                    <c:TeknoButton 
+                        Grid.Row="3" Grid.Column="1"
+                        Text="Ziyaret Başlat"
+                        CornerRadius="25"
+                        ImageSource="logo.jpg"
+                        BackColor="#e3b45a"/>
+
+                    <c:TeknoButton 
+                        Grid.Row="3" Grid.Column="2"
+                        Text="Ziyaret Kapat"
+                        CornerRadius="25"
+                        ImageSource="logo.jpg"
+                        BackColor="#e3b45a"/>
+
+                </Grid>
+
+
+                <Grid Grid.Row="1"
+                      RowDefinitions="*,*"
+                      RowSpacing="10"
+                      ColumnDefinitions="*,*"
+                      ColumnSpacing="10">
+                    
+                    <c:TeknoCategoryButton 
+                        Text="Ziyaret Operasyonları"
+                        TextColor="Black"
+                        BarColor="Purple"
+                        ClickBackgroundColor="Red"
+                        ImageSource="logo.jpg"
+                        FontFamily="FASolid900"
+                        CornerRadius="10"/>
+                    
+                    <c:TeknoCategoryButton 
+                        Grid.Row="0" Grid.Column="1"
+                        Text="Stok Kontrolü"
+                        TextColor="Black"
+                        BarColor="Orange"
+                        CornerRadius="10"/>
+                    
+                    <c:TeknoCategoryButton 
+                        Grid.Row="1" Grid.Column="0"
+                        Text="Raporlar"
+                        TextColor="Black"
+                        BarColor="Green"
+                        CornerRadius="10"/>
+
+                    <c:TeknoCategoryButton 
+                        Grid.Row="1" Grid.Column="1"
+                        Text="Masraflar"
+                        TextColor="Black"
+                        BarColor="Blue"
+                        CornerRadius="10"/>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

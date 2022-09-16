@@ -44,6 +44,8 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\fa-solid-900.ttf" />
+	  <None Remove="Resources\Images\diger.png" />
+	  <None Remove="Resources\Images\logo.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -55,12 +57,27 @@
 	  <ProjectReference Include="..\Scr\StateButton.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Compile Update="Controls\TeknoCategoryButton.xaml.cs">
+	    <DependentUpon>TeknoCategoryButton.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="ExampleTestPage.xaml.cs">
+	    <DependentUpon>ExampleTestPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
 
 	<ItemGroup>
 	  <MauiXaml Update="ButtonNotInScrollViewPage.xaml">
 	    <Generator></Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Controls\TeknoCategoryButton.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Controls\TeknoButton.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ExampleTestPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ExamplePage.xaml">

@@ -1,66 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="App.ExamplePage"
-             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:c="clr-namespace:App.Controls"
-             xmlns:stateButton="clr-namespace:StateButton;assembly=StateButton"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             Title="Examples">
+<ContentPage 
+    x:Class="App.ExamplePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:c="clr-namespace:App.Controls" 
+    BackgroundColor="Red">
     <ContentPage.Content>
         <ScrollView>
-            <Grid 
-                RowDefinitions="30,30,30,30,*"
-                ColumnDefinitions="*,*,*">
- 
-                <c:TeknoButton Grid.Row="0" Grid.Column="0"
-                               Text="Ziyaret Föyü"
-                               BackColor="#de81c9"/>
-                
-                <c:TeknoButton Grid.Row="0" Grid.Column="1"
-                               Text="Sipariş Föyü"
-                               BackColor="#de81c9"/>
-                
-                <c:TeknoButton Grid.Row="0" Grid.Column="2"
-                               Text="Stok Föyü"
-                               BackColor="#de81c9"/>
-                
-                <c:TeknoButton Grid.Row="1" Grid.Column="0"
-                               Text="C/H Föyü"
-                               BackColor="#de81c9"/>
-                
-                <c:TeknoButton Grid.Row="1" Grid.Column="1"
-                               Text="Değişim"
-                               BackColor="#9dc764"/>
-                
-                <c:TeknoButton Grid.Row="1" Grid.Column="2"
-                               Text="Tahsilat"
-                               BackColor="#b8ccff"/>
-                
-                <c:TeknoButton Grid.Row="2" Grid.Column="0"
-                               Text="Sipariş"
-                               BackColor="#b8ccff"/>
-
-                <c:TeknoButton Grid.Row="2" Grid.Column="1"
-                               Text="İrsaliye"
-                               BackColor="#b8ccff"/>
-
-                <c:TeknoButton Grid.Row="2" Grid.Column="2"
-                               Text="Fatura"
-                               BackColor="#b8ccff"/>
-
-                <c:TeknoButton Grid.Row="3" Grid.Column="0"
-                               Text="C/H Bilgileri"
-                               BackColor="#e3b45a"/>
-
-                <c:TeknoButton Grid.Row="3" Grid.Column="1"
-                               Text="Ziyaret Başlat"
-                               BackColor="#e3b45a"/>
-
-                <c:TeknoButton Grid.Row="3" Grid.Column="2"
-                               Text="Ziyaret Kapat"
-                               BackColor="#e3b45a"/>
-
-            </Grid>
+            
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
