@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<stateButton:StateButton
+    x:Name="xStateButton" 
+    HeightRequest="125" WidthRequest="125"
+    x:Class="App.Controls.TeknoCircleButton"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:stateButton="clr-namespace:StateButton;assembly=StateButton"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    BackgroundColor="White"
+    StrokeThickness="0"
+    Stroke="White">
+
+    <stateButton:StateButton.StrokeShape>
+        <RoundRectangle x:Name="xRoundRectangle" />
+    </stateButton:StateButton.StrokeShape>
+    <stateButton:StateButton.Triggers>
+        <Trigger TargetType="stateButton:StateButton" Property="State" Value="Pressed">
+            <Setter x:Name="ClickedBackgroundColor" Property="BackgroundColor" Value="#10a366" />
+        </Trigger>
+    </stateButton:StateButton.Triggers>
+    <Label
+        x:Name="xLabel"
+        HorizontalOptions="Center" 
+        VerticalOptions="Center"
+        Text="+"
+        FontSize="75"
+        TextColor="Black"
+        Margin="15"/>
+</stateButton:StateButton>

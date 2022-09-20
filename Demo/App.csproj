@@ -58,6 +58,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Controls\TeknoCircleButton.xaml.cs">
+	    <DependentUpon>TeknoCircleButton.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Controls\TeknoCategoryButton.xaml.cs">
 	    <DependentUpon>TeknoCategoryButton.xaml</DependentUpon>
 	  </Compile>
@@ -70,6 +73,9 @@
 	<ItemGroup>
 	  <MauiXaml Update="ButtonNotInScrollViewPage.xaml">
 	    <Generator></Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Controls\TeknoCircleButton.xaml">
+	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Controls\TeknoCategoryButton.xaml">
 	    <Generator>MSBuild:Compile</Generator>

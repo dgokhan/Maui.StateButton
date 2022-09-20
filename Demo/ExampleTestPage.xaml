@@ -7,12 +7,12 @@
     xmlns:stateButton="clr-namespace:StateButton;assembly=StateButton"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="Examples"
-    BackgroundColor="White">
+    BackgroundColor="Black">
     <ContentPage.Content>
         <ScrollView>
-            <Grid RowDefinitions="350,Auto,*"
+            <Grid RowDefinitions="Auto,Auto,250"
                   Margin="20,0,20,0">
-                
+
                 <Grid Grid.Row="0"
                     VerticalOptions="Center"
                     RowDefinitions="30,30,30,30,*"
@@ -108,13 +108,12 @@
 
                 </Grid>
 
-
                 <Grid Grid.Row="1"
                       RowDefinitions="*,*"
                       RowSpacing="10"
                       ColumnDefinitions="*,*"
                       ColumnSpacing="10">
-                    
+
                     <c:TeknoCategoryButton 
                         Text="Ziyaret Operasyonları"
                         TextColor="Black"
@@ -123,14 +122,14 @@
                         ImageSource="logo.jpg"
                         FontFamily="FASolid900"
                         CornerRadius="10"/>
-                    
+
                     <c:TeknoCategoryButton 
                         Grid.Row="0" Grid.Column="1"
                         Text="Stok Kontrolü"
                         TextColor="Black"
                         BarColor="Orange"
                         CornerRadius="10"/>
-                    
+
                     <c:TeknoCategoryButton 
                         Grid.Row="1" Grid.Column="0"
                         Text="Raporlar"
@@ -147,7 +146,11 @@
                 </Grid>
 
                 <Grid Grid.Row="2">
-                    
+                    <c:TeknoCircleButton 
+                        TextColor="Black"
+                        VerticalOptions="Start"
+                        FontSize="30"
+                        CircleHeightRequest="60" CircleWidthRequest="60"/>
                 </Grid>
             </Grid>
         </ScrollView>
